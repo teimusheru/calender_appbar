@@ -52,6 +52,9 @@ class _ExamplePageState extends State<ExamplePage> {
     _selectedDateNotAppBBar = DateTime.now();
   }
 
+  //住所変数
+  String  kenmei = 'お住いの地域';
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -96,12 +99,35 @@ class _ExamplePageState extends State<ExamplePage> {
       body: Center(
         child: Column(
           children: [
+            OutlinedButton(
+              child: Text(kenmei, textAlign: TextAlign.left),
+              style: OutlinedButton.styleFrom(
+                primary: Colors.black,
+
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(10),
+                ),
+
+                minimumSize: Size(350.0 ,50.0),
+                side: const BorderSide(color: Colors.amber),
+              ),
+              onPressed: () {},
+
+
+            ),
+
+
 
             SizedBox(
               height: 20.0,
             ),
             Text('aaaaaaaaaaaaa'),
+            /*suffixIcon: const Icon(Icons.search),
 
+            hintText: 'お住いの地域',
+            filled: true,
+            border: OutlineInputBorder(
+                borderRadius: BorderRadius.circular(18))*/
 
           ],
         ),
